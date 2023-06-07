@@ -10,7 +10,6 @@ st.write("")
 file_up = st.file_uploader("Upload an image", type = "jpg")
 transform_test = transforms.Compose([
     transforms.Resize((224, 224), Image.BILINEAR),
-    transforms.CenterCrop(),
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
