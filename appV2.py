@@ -19,7 +19,7 @@ urllib.request.urlretrieve(Model_URL, "model.pth")
 
 model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=True)
 
-model.load_state_dict(torch.load('model.pth'))
+model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu')))
 model.eval()
 
 
