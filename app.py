@@ -1,9 +1,11 @@
+from PIL import Image
+import torch 
+from torchvision import models, transforms
 import streamlit as st
-import numpy as np
-import pandas as pd
 
-chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+# set title of app
+st.title("Simple Image Classification Application")
+st.write("")
 
-st.line_chart(chart_data)
+# enable users to upload images for the model to make predictions
+file_up = st.file_uploader("Upload an image", type = "jpg")
