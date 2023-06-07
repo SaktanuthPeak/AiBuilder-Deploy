@@ -17,7 +17,7 @@ Model_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimg
 urllib.request.urlretrieve(Model_URL, "model.pth")
 
 
-model = torch.hub.load('pytorch/vision', 'resnet34', pretrained=True)
+model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=True)
 
 model.load_state_dict(torch.load('model.pth'))
 model.eval()
