@@ -16,7 +16,7 @@ transform_test = transforms.Compose([
 Model_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
 urllib.request.urlretrieve(Model_URL, "model.pth")
 
-model = torch.hub.load('model.pth','resnet34' , pretrained=True, **{'topN': 6, 'device':'cpu', 'num_classes': 54})
+model = torch.load('model.pth', map_location=torch.device('cpu'))
 model.eval()
 
 
