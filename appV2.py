@@ -1,9 +1,17 @@
-from torchvision import transforms
 import torch
+
 import urllib
 from PIL import Image
 import streamlit as st
 import urllib.request
+import os
+import os.path as op
+import pandas as pd
+import numpy as np
+from torchvision import datasets, models, transforms
+import torch
+from torch.utils.data import Dataset
+import cv2
 
 st.title("Thai food image classification")
 st.write("")
@@ -17,8 +25,8 @@ transform_test = transforms.Compose([
 
 
 
-model = torch.load("Foodimgcls.pth", map_location=torch.device('cpu')) #โมเดล
-
+model = models.resnet50()  # Or the appropriate model architecture
+model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
 model.eval()
 
 # enable users to upload images for the model to make predictions
