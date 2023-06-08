@@ -25,7 +25,7 @@ transform_test = transforms.Compose([
 
 
 
-model = models.resnet50()  # Or the appropriate model architecture
+model = models.resnet34()  # Or the appropriate model architecture
 model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
 model.eval()
 
