@@ -25,7 +25,7 @@ transform_test = transforms.Compose([
 
 
 
-model = models.resnet34()  # Instantiate the ResNet-50 model
+model = models.resnet34()     
 model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
 model.eval()
 
