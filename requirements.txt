@@ -1,7 +1,11 @@
-streamlit==1.10.0
-torch==1.8.1+cpu
+https://download.pytorch.org/whl/cpu/torch-1.8.1%2Bcpu-cp39-cp39-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.9.1%2Bcpu-cp39-cp39-linux_x86_64.whl
+fastai
+streamlit
+numpy
+pandas
+torch==1.8.1+cpu 
 torchvision==0.9.1+cpu
-Pillow==9.1.0
-fastai>=2.3.1
-plotly>=5.7.0
+voila
 ipywidgets
+opencv-python-headless
