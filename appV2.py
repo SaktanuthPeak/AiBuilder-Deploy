@@ -14,14 +14,12 @@ transform_test = transforms.Compose([
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
 Model_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
-urllib.request.urlretrieve(Model_URL, "model.pth")
+MODEL = 'Foodimgcls.pth'
+urllib.request.urlretrieve(Model_URL, MODEL)
 
 
-model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=True)
-
-model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu')))
+model = torch.load(MODEL)
 model.eval()
-
 
 # enable users to upload images for the model to make predictions
 img = Image.open(urllib.request.urlopen(file_up))
