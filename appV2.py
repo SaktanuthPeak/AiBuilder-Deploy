@@ -26,7 +26,7 @@ transform_test = transforms.Compose([
 
 
 model = models.resnet34()  # Or the appropriate model architecture
-model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
+model.load(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
 model.eval()
 
 # enable users to upload images for the model to make predictions
