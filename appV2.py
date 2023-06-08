@@ -18,7 +18,7 @@ MODEL = 'Foodimgcls.pth'
 urllib.request.urlretrieve(Model_URL, MODEL)
 
 
-model = torch.load(MODEL)
+model = torch.load(MODEL, map_location=torch.device('cpu'))
 model.eval()
 
 # enable users to upload images for the model to make predictions
