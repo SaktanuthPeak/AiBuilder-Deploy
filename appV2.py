@@ -14,8 +14,7 @@ transform_test = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
-MODEL_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
-urllib.request.urlretrieve(MODEL_URL, "Foodimgcls.pkl")
+
 model = models.resnet34()
 num_features = model.fc.in_features
 model.fc = torch.nn.Linear(num_features, 54)  
