@@ -14,7 +14,8 @@ transform_test = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
-
+MODEL_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
+urllib.request.urlretrieve(MODEL_URL, "Foodimgcls.pkl")
 model = models.resnet34()
 num_features = model.fc.in_features
 model.fc = torch.nn.Linear(num_features, 54)  
@@ -23,9 +24,9 @@ model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cp
 model.eval()
 
 class_names = {
- 0: "american_fried_rice",
+ 0: "ก๋วยเตี๋ยวเรือ",
  1: "bitter_gourd_soup",
- 2:"Boat_noodle",
+ 2:"กุ้ยช่าย",
  3:"Boiled_cockles",
  4:"bua_loi",
  5:"Chives",
@@ -45,8 +46,8 @@ class_names = {
  19:"khao_klook_kapi",
  20:"khao_mok_kai",
  21:"ข้าวผัดอเมริกัน",
- 22:"khao_soi",
- 23:"khao_yam",
+ 22:"เเกงจืดมะระ",
+ 23:"ข้าวยํา",
  24:"Koong_chae_nampla",
  25:"larb",
  26:"mango_with_sticky_rice",
