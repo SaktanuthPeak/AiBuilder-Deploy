@@ -86,26 +86,22 @@ class_names = {
 
 model.food_class = class_names 
 
-
 if file_up is not None:
-    
     temp_file_path = "temp.jpg"
     with open(temp_file_path, "wb") as f:
         f.write(file_up.getvalue())
 
-    
     img = Image.open(temp_file_path)
     scaled_img = transform_test(img)
-    torch_images = scaled_img.unsqueeze(0)  
+    torch_images = scaled_img.unsqueeze(0)
 
     with torch.no_grad():
         outputs = model(torch_images)
 
         _, predict = torch.max(outputs, 1)
         pred_id = predict.item()
-        print('ชนิดอาหาร:', model.food_class[pred_id])
+        st.write('ชนิดอาหาร:', model.food_class[pred_id])
 
-    
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
