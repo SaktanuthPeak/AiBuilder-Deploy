@@ -33,7 +33,7 @@ if file_up is not None:
     # Open the saved image file using PIL
     img = Image.open(temp_file_path)
     scaled_img = transform_test(img)
-    torch_images = scaled_img.unsqueeze(0)
+    torch_images = scaled_img.unsqueeze(0)  # Add a batch dimension
 
     with torch.no_grad():
         top_n_coordinates, concat_out, raw_logits, concat_logits, part_logits, top_n_index, top_n_prob = model(torch_images)
