@@ -44,7 +44,7 @@ class_names = {
  18:"khai_palo",
  19:"khao_klook_kapi",
  20:"khao_mok_kai",
- 21:"khao_na_ped",
+ 21:"ข้าวผัดอเมริกัน",
  22:"khao_soi",
  23:"khao_yam",
  24:"Koong_chae_nampla",
