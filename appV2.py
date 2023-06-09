@@ -36,9 +36,9 @@ if file_up is not None:
     torch_images = scaled_img.unsqueeze(0)  # Add a batch dimension
 
     with torch.no_grad():
-        top_n_coordinates, concat_out, raw_logits, concat_logits, part_logits, top_n_index, top_n_prob = model(torch_images)
+        outputs = model(torch_images)
 
-        _, predict = torch.max(concat_logits, 1)
+        _, predict = torch.max(outputs, 1)
         pred_id = predict.item()
         print('ชนิดอาหาร:', model.food_class[pred_id])
 
