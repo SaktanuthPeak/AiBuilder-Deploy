@@ -14,16 +14,16 @@ transform_test = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
-
+MODEL_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
+urllib.request.urlretrieve(MODEL_URL, "Foodimgcls.pkl")
 model = models.resnet34()
 num_features = model.fc.in_features
-model.fc = torch.nn.Linear(num_features, 54)  # Replace the last fully connected layer for 54 classes
-
+model.fc = torch.nn.Linear(num_features, 54)  
 model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
 
 model.eval()
 
-# Load the class names from a dictionary or file
+
 class_names = {
     
  0:"Vermicelli_Salad",
@@ -83,19 +83,19 @@ class_names = {
     
 }
 
-model.food_class = class_names  # Assign the class names to the model's food_class attribute
+model.food_class = class_names 
 
-# enable users to upload images for the model to make predictions
+
 if file_up is not None:
-    # Save the uploaded file to a temporary location
+    
     temp_file_path = "temp.jpg"
     with open(temp_file_path, "wb") as f:
         f.write(file_up.getvalue())
 
-    # Open the saved image file using PIL
+    
     img = Image.open(temp_file_path)
     scaled_img = transform_test(img)
-    torch_images = scaled_img.unsqueeze(0)  # Add a batch dimension
+    torch_images = scaled_img.unsqueeze(0)  
 
     with torch.no_grad():
         outputs = model(torch_images)
@@ -104,7 +104,7 @@ if file_up is not None:
         pred_id = predict.item()
         print('ชนิดอาหาร:', model.food_class[pred_id])
 
-    # Remove the temporary image file
+    
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
