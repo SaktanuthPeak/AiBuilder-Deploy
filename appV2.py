@@ -23,6 +23,69 @@ model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cp
 
 model.eval()
 
+# Load the class names from a dictionary or file
+class_names = {
+    0: "Class 0",
+    1: "Class 1",
+ "Vermicelli_Salad",
+ 'Tai_pla_curry',
+ 'moo_krob',
+ 'Omlette_with_rice',
+ 'Grilled_river_prawns',
+ 'Pla_kapong_nueng_manow',
+ 'massaman_curry',
+ 'Koong_chae_nampla',
+ 'Stewed_pork_leg',
+ 'tom_yam_kung',
+ 'Boat_noodle',
+ 'pad_thai',
+ 'Stir_Fried_Chicken_with_Cashew_Nuts',
+ 'pla_sam_rod',
+ 'tom_kha_kai',
+ 'grilled_squid',
+ 'pad_si_ew',
+ 'mango_with_sticky_rice',
+ 'khao_klook_kapi',
+ 'khao_soi',
+ 'Kanom_khai_tao',
+ 'Curry_puff',
+ 'kanom_tarn',
+ 'Deep_fried_crab_meat_roll',
+ 'khao_na_ped',
+ 'salt_grilled_fish',
+ 'khao_yam',
+ 'pineapple_fried_rice',
+ 'stir-fried_stink_bean',
+ 'khai_palo',
+ 'som_tam',
+ 'crab_curry',
+ 'Rad_na',
+ 'Mango_with_sweet_fish_sauce',
+ 'stir-fried_morning_glory',
+ 'fried_spring_roll',
+ 'Kanom_krok',
+ 'Crispy_Catfish_Salad',
+ 'Boiled_cockles',
+ 'sai_ua',
+ 'Yen_ta_fo',
+ 'khao_mok_kai',
+ 'Chives',
+ 'Stir_Fried_Baby_Clams',
+ 'son_in_law_egg',
+ 'fried_chicken',
+ 'pork_basil_with_rice',
+ 'kanom_chan',
+ 'Steamed_Fish_Curry',
+ 'american_fried_rice',
+ 'larb',
+ 'tod_mun_pla',
+ 'bitter_gourd_soup',
+ 'bua_loi'
+    
+}
+
+model.food_class = class_names  # Assign the class names to the model's food_class attribute
+
 # enable users to upload images for the model to make predictions
 if file_up is not None:
     # Save the uploaded file to a temporary location
