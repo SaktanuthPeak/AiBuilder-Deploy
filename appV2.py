@@ -33,7 +33,7 @@ class_names = {
  4:"Grilled_river_prawns",
  5:"Pla_kapong_nueng_manow",
  6:"massaman_curry",
- 7:"Koong_chae_nampla',
+ 7:"Koong_chae_nampl",
  8:"Stewed_pork_leg",
  9:"tom_yam_kung",
  10:"Boat_noodle",
