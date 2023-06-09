@@ -56,7 +56,7 @@ class_names = {
  27:"pineapple_fried_rice",
  28:"stir-fried_stink_bean",
  29:"khai_palo",
- 30:'som_tam",
+ 30:"som_tam",
  31:"crab_curry",
  32:"Rad_na",
  33:"Mango_with_sweet_fish_sauce",
@@ -69,7 +69,7 @@ class_names = {
  40:"Yen_ta_fo",
  41:"khao_mok_kai",
  42:"Chives",
- 43:"Stir_Fried_Baby_Clams',
+ 43:"Stir_Fried_Baby_Clams",
  44:"son_in_law_egg",
  45:"fried_chicken",
  46:"pork_basil_with_rice",
@@ -77,9 +77,9 @@ class_names = {
  48:"Steamed_Fish_Curry",
  49:"american_fried_rice",
  50:"larb",
- 51:'tod_mun_pla",
- 52:'bitter_gourd_soup",
- 53:'bua_loi"
+ 51:"tod_mun_pla",
+ 52:"bitter_gourd_soup",
+ 53:"bua_loi"
     
 }
 
