@@ -25,8 +25,12 @@ transform_test = transforms.Compose([
 
 
 
-model = models.resnet34()     
+model = models.resnet34()
+num_features = model.fc.in_features
+model.fc = torch.nn.Linear(num_features, 54)  # Replace the last fully connected layer for 54 classes
+
 model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
+
 model.eval()
 
 # enable users to upload images for the model to make predictions
