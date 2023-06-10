@@ -54,8 +54,8 @@ class_names = {
  27:"ปลาหมึกย่าง",
  28:"ขนมชั้น",
  29:"ขนมตาล",
- 30:"Omlette_with_rice",
- 31:"pad_si_ew",
+ 30:"ไข่พะโล้",
+ 31:"ข้าวคลุกกะปิ",
  32:"pad_thai",
  33:"pineapple_fried_rice",
  34:"Pla_kapong_nueng_manow",
@@ -77,7 +77,7 @@ class_names = {
  50:"tom_kha_kai",
  51:"tom_yam_kung",
  52:"Vermicelli_Salad",
- 53: "Yen_ta_fo"
+ 53:"Yen_ta_fo"
 }
 
 model.food_class = class_names 
