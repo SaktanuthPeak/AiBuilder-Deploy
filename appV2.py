@@ -9,7 +9,7 @@ from torchvision import models, transforms
 st.title("Thai food image classification")
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
-img = PILImage.create(file_up)
+img = Image.create(file_up)
 st.title("Here is the image you've selected") #display selected image
 st.image(img)
 transform_test = transforms.Compose([
