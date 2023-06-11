@@ -90,7 +90,7 @@ if file_up is not None:
     img = Image.open(temp_file_path)
 
     # Display the input image
-    st.image(img, caption='Input Image', use_column_width=True)
+    st.image(img, caption='รูปอาหาร', use_column_width=True)
 
     scaled_img = transform_test(img)
     torch_images = scaled_img.unsqueeze(0)
