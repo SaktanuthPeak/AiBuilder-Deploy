@@ -9,11 +9,15 @@ from torchvision import models, transforms
 st.title("Thai food image classification")
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
+img = PILImage.create(file_up)
+st.title("Here is the image you've selected") #display selected image
+st.image(img)
 transform_test = transforms.Compose([
     transforms.Resize((224, 224), Image.BILINEAR),
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
+
 MODEL_URL = "https://github.com/SaktanuthPeak/AiBuilder-Deploy/blob/main/Foodimgcls.pth"
 urllib.request.urlretrieve(MODEL_URL, "Foodimgcls.pkl")
 model = models.resnet34()
