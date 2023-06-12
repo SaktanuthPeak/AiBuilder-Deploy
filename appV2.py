@@ -5,7 +5,7 @@ import streamlit as st
 import os
 import os.path as op
 from torchvision import models, transforms
-
+st.snow()
 st.title("Thai food image classification")
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
