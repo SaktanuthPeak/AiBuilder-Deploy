@@ -100,7 +100,7 @@ if file_up is not None:
         _, predict = torch.max(outputs, 1)
         pred_id = predict.item()
         st.write('ชนิดอาหาร:', model.food_class[pred_id])
-        st.snow()
+        st.balloon()
 
     os.remove(temp_file_path)
 else:
