@@ -18,8 +18,7 @@ transform_test = transforms.Compose([
 model = models.resnet34()
 num_features = model.fc.in_features
 model.fc = torch.nn.Linear(num_features, 54)  
-model.load_state_dict(torch.load("Foodimgcls.pth", map_location=torch.device('cpu')))
-
+model.load_state_dict(torch.load("Finalmodel.pth", map_location=torch.device('cpu')))
 model.eval()
 
 class_names = {
