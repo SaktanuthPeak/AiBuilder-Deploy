@@ -6,6 +6,7 @@ import os
 import os.path as op
 from torchvision import models, transforms
 st.set_page_config(layout="centered")
+st.image('banana-crying-cat.gif')
 st.title("Thai food image classification")
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
