@@ -83,7 +83,7 @@ class_names = {
 model.food_class = class_names 
 
 if file_up is not None:
-    col1 , col2 , col3 = st.column(3)
+    col1 , col2 , col3 = st.columns(3)
     with col1:
         st.write(' ')
 
