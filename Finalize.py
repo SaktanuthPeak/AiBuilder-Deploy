@@ -117,6 +117,14 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-    st.image('banana-crying-cat.gif',)
+    col1 , col2 , col3 = st.columns(3)
+    with col1:
+        st.write(' ')
+
+    with col2:
+        st.image('banana-crying-cat.gif')
+
+    with col3:
+        st.write(' ')
 
 st.image('logo-image.png',)
