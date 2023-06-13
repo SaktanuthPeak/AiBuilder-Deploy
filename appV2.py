@@ -7,6 +7,7 @@ import os.path as op
 from torchvision import models, transforms
 st.title("Thai food image classification")
 st.write("")
+st.image('logo-image.png')
 file_up = st.file_uploader("Upload an image", type="jpg")
 
 transform_test = transforms.Compose([
