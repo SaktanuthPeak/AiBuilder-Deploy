@@ -6,8 +6,8 @@ import os
 import os.path as op
 from torchvision import models, transforms
 st.set_page_config(layout="centered")
-st.image('banana-crying-cat.gif')
 st.title("Thai food image classification")
+
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
 
@@ -83,6 +83,8 @@ class_names = {
 model.food_class = class_names 
 
 if file_up is not None:
+    st.image('banana-crying-cat.gif')
+
     temp_file_path = "temp.jpg"
     with open(temp_file_path, "wb") as f:
         f.write(file_up.getvalue())
@@ -106,5 +108,4 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-
 st.image('logo-image.png',)
