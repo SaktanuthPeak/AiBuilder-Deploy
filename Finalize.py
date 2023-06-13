@@ -117,4 +117,4 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-st.image('logo-image.png',)
+st.image('banana-cryimg-cat.gif',)
