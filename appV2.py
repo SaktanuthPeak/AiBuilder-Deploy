@@ -5,6 +5,7 @@ import streamlit as st
 import os
 import os.path as op
 from torchvision import models, transforms
+st.set_page_config(layout="centered")
 st.title("Thai food image classification")
 st.write("")
 file_up = st.file_uploader("Upload an image", type="jpg")
@@ -104,5 +105,5 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-st.set_page_config(layout="centered")
+
 st.image('logo-image.png',)
