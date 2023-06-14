@@ -126,4 +126,3 @@ else:
     with col3:
         st.write(' ')
 
-st.images('logo-image.png')
