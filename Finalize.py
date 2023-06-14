@@ -83,15 +83,14 @@ class_names = {
 model.food_class = class_names 
 
 if file_up is not None:
-    col1 , col2 , col3 = st.columns(3)
+    col1 , col2  = st.columns(2)
     with col1:
-        st.write(' ')
+        st.image('cat.gif')
 
     with col2:
         st.image('cat-jump.gif')
 
-    with col3:
-        st.write(' ')
+    
         
         
     temp_file_path = "temp.jpg"
@@ -127,4 +126,10 @@ else:
     with col3:
         st.write(' ')
 
-st.image('logo-image.png',)
+col1,col2,col3 = st.columns(3)
+with col1:
+    st.write(' ')
+with col2:
+    st.images('logo-image.png')
+with col3:
+    st.wirte(' ')        
