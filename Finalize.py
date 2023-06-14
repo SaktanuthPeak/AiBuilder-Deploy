@@ -83,14 +83,17 @@ class_names = {
 model.food_class = class_names 
 
 if file_up is not None:
-    col1 , col2  = st.columns(2)
+    col1 , col2 ,col3 , col4 = st.columns(4)
     with col1:
-        st.image('cat.gif')
+        st.write(' ')
 
     with col2:
-        st.image('cat-jump.gif')
+        st.image('cat.gif')
 
-    
+    with col3:
+        st.image('cat-jump.gif')
+    with col4:
+        st.write(' ')    
         
         
     temp_file_path = "temp.jpg"
@@ -99,7 +102,6 @@ if file_up is not None:
 
     img = Image.open(temp_file_path)
 
-    # Display the input image
     st.image(img, caption='รูปอาหาร', use_column_width=True)
 
     scaled_img = transform_test(img)
