@@ -83,18 +83,7 @@ class_names = {
 model.food_class = class_names 
 
 if file_up is not None:
-    col1 , col2 ,col3 , col4 = st.columns(4)
-    with col1:
-        st.write(' ')
 
-    with col2:
-        st.image('cat.gif')
-
-    with col3:
-        st.image('cat-jump.gif')
-    with col4:
-        st.write(' ')    
-        
         
     temp_file_path = "temp.jpg"
     with open(temp_file_path, "wb") as f:
@@ -118,13 +107,6 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-    col1 , col2 , col3 = st.columns(3)
-    with col1:
-        st.write(' ')
-
-    with col2:
-        st.image('banana-crying-cat.gif')
-
-    with col3:
-        st.write(' ')
+if class_names = 18:
+    st.image('confusion_marix.png')
 
