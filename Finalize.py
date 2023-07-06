@@ -81,7 +81,7 @@ class_names = {
 }
 
 model.food_class = class_names 
-if class_names ==  18:
+if model ==  18:
     st.image('confusion_marix.png')
 
 
