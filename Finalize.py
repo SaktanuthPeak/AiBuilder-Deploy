@@ -105,7 +105,7 @@ if file_up is not None:
         pred_id = predict.item()
         st.write('ชนิดอาหาร:', model.food_class[pred_id])
         if pred_id == 18:
-            st.image('cat-jump.gif')
+            st.image('nutrition.jpg')
 
     os.remove(temp_file_path)
 else:
