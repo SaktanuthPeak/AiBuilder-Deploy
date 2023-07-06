@@ -81,6 +81,10 @@ class_names = {
 }
 
 model.food_class = class_names 
+if class_names ==  18:
+    st.image('confusion_marix.png')
+
+
 
 if file_up is not None:
 
@@ -107,6 +111,3 @@ if file_up is not None:
     os.remove(temp_file_path)
 else:
     st.write("Please upload an image file.")
-if class_names ==  18:
-    st.image('confusion_marix.png')
-
