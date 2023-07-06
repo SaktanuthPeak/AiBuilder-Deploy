@@ -82,7 +82,7 @@ class_names = {
 
 model.food_class = class_names 
 if model ==  18:
-    st.image('confusion_marix.png')
+    st.image('cat-jump.gif')
 
 
 
